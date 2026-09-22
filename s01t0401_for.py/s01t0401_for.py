@@ -10,7 +10,7 @@ timestamp_01 = time.time()
 
 #Programa que calcule las sumas
 #de los "n" numeros naturales
-n = 100
+n =100
 total_sum = 0
 
 #Ciclo for
