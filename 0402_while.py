@@ -4,20 +4,40 @@ Por Ejemplo sin 100, el programa calculara la suma del 1 al 100
 """
 #importamos biblioteca time
 import time
-#
-n = 100
-the_sum = 0
-#Tomamaos el t1
-timestamp_01 = time.time()
-#iniciando la suma
-#100
-while(n>0):
-    the_sum=the_sum+n
-    n=n-1
-#Tomamos la solucion 
-timestamp_02 = time.time()
-#Imprimimos la solucion 
-print(f"La suma es{the_sum}")
-#Calculamos el tiempo
-elaps_time = round((timestamp_02 - timestamp_01 ) * 1e6,ndigits=2)
-print(f"Tiempo de ejecucion: {elaps_time}us")
+
+# Función que suma los primeros n números naturales usando while
+def sum_of_n(n):
+    total_sum = 0
+    number = 1
+
+    while number <= n:
+        total_sum = total_sum + number
+        number += 1
+
+    return total_sum
+
+
+dataset = []
+
+repetition = 1
+while repetition <= 10:
+    # Tomando el tiempo inicial
+    timestamp_01 = time.time()
+
+    # Sumar los n números
+    n = repetition * 500
+    result = sum_of_n(n)
+
+    # Tomando el tiempo final
+    timestamp_02 = time.time()
+
+    elaps_time = round((timestamp_02 - timestamp_01) * 1e6,ndigits=2)
+
+    # Agregar datos al dataset
+    dataset.append((n, elaps_time, result))
+
+    repetition += 1
+
+# Imprimir dataset
+for tup in dataset:
+    print(tup)
