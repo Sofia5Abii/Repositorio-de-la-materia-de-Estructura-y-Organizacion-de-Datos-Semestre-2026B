@@ -1,6 +1,6 @@
 from array import array as arr
 
-from s0 import print_array 
+from s02.s02t0102_Arrayid import print_array 
 
 my_array = arr('i',[2,10,15,20])
 
@@ -13,4 +13,5 @@ print("--- DESPUES DE LA INSECION ---")
 print_array(my_array)
 
 print("--- SIMULAR UN APPEN CON INSERT ---")
-my_array insert
+my_array.insert(len (my_array),90000)
+print_array(my_array)
