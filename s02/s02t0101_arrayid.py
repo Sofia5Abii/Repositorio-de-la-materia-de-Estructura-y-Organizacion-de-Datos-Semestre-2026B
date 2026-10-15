@@ -20,6 +20,14 @@ my_array = arr.array('i' ,[10,22,300,1,12,63,43])
 
 print(len(my_array))
 
-for i in range(len(my_array)):
-    if my_array[i]%2==0:
-        print(f"Elemento {i+1}: {my_array[i]}")
+#for i in range(len(my_array)):
+    #if my_array[i]%2==0:
+       # print(f"Elemento {i+1}: {my_array[i]}")
+
+#Busqueda de un elemento
+num_to_serch = 45 
+
+try: 
+    print(f"Localizando 1:{my_array.index (num_to_serch)}")
+except:
+    print("⚠️ Numero no encontrado!!")
