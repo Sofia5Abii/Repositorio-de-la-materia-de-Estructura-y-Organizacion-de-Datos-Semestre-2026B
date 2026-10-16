@@ -1,6 +1,6 @@
 from array import array as arr
 
-from s02t0102_Arrayid import print_array 
+from s02t0102_id import print_array
 
 my_array = arr('i',[2,10,15,20])
 
